@@ -1,40 +1,47 @@
 {
-  "name": "lalight-kosh-api",
+  "name": "mesto-server",
   "version": "1.0.0",
-  "description": "api for education purpose",
-  "main": "index.js",
-  "repository": "https://github.com/totfront/lalight-kosh-api.git",
-  "author": "totfront <totfront@gmail.com>",
-  "license": "MIT",
+  "description": "backend of Mesto project\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001bfor \u001b[24~d\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[CMesto-auth project",
+  "main": "app.js",
   "scripts": {
-    "dev": "ts-node-dev --respawn --transpile-only src/app.ts"
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "test",
+    "lint": "npx eslint . --fix",
+    "deploy": "scp -r ../backend/* xelarim@62.84.120.178:/home/xelarim/mesto/backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/totfront/mesto-backend.git"
+  },
+  "keywords": [
+    "mesto-server"
+  ],
+  "author": "Alex Mir",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/totfront/mesto-backend/issues"
+  },
+  "homepage": "https://github.com/totfront/mesto-backend#readme",
+  "devDependencies": {
+    "eslint": "7.2.0",
+    "eslint-config-airbnb": "18.2.1",
+    "eslint-plugin-import": "2.22.1",
+    "nodemon": "^2.0.12"
   },
   "dependencies": {
-    "bcrypt": "^5.0.1",
-    "config": "^3.3.7",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "celebrate": "^15.0.0",
+    "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
-    "express": "^4.18.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-winston": "^4.2.0",
+    "helmet": "^4.6.0",
     "jsonwebtoken": "^8.5.1",
-    "lodash": "^4.17.21",
-    "mongoose": "^6.5.4",
-    "nanoid": "^4.0.0",
-    "pino": "^8.4.2",
-    "pino-pretty": "^9.1.0",
-    "yup": "^0.32.11",
-    "zod": "^3.18.0"
-  },
-  "devDependencies": {
-    "@types/bcrypt": "^5.0.0",
-    "@types/body-parser": "^1.19.2",
-    "@types/config": "^3.3.0",
-    "@types/cors": "^2.8.12",
-    "@types/express": "^4.17.13",
-    "@types/jsonwebtoken": "^8.5.9",
-    "@types/lodash": "^4.14.184",
-    "@types/nanoid": "^3.0.0",
-    "@types/node": "^18.7.14",
-    "@types/pino": "^7.0.5",
-    "ts-node-dev": "^2.0.0",
-    "typescript": "^4.8.2"
+    "mongoose": "^6.1.9",
+    "validator": "^13.6.0",
+    "winston": "^3.3.3"
   }
 }
